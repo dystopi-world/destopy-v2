@@ -2,11 +2,8 @@ import { headers } from "next/headers";
 import { vanguard } from "@/app/fonts";
 import Image from "next/image";
 import Link from "next/link";
-import Marquee from "react-fast-marquee";
 import { FaStarOfLife } from "react-icons/fa";
 import { Karla } from "next/font/google";
-import CountdownTimer from "./CountDownTimer";
-import { Suspense } from "react";
 import InfiniteCarousel from "./InfiniteCarousel";
 
 const karla = Karla({ subsets: ["latin"] });
@@ -58,12 +55,10 @@ const LandingContainer = () => {
           href="https://forms.gle/uYBTeUG3PV5SArEt5"
           target="_blank"
           prefetch={false}
-          className="text-zinc-950 mb-8 rounded-full bg-dystopi-yellow px-10 py-2 text-sm text-dystopi-black md:text-base 4xl:text-3xl"
+          className="text-zinc-950 rounded-full bg-dystopi-yellow px-10 py-2 text-sm text-dystopi-black md:text-base 4xl:text-3xl"
         >
           JOIN WHITELIST
         </Link>
-
-        <CountdownTimer />
       </div>
       <InfiniteCarousel />
     </section>
